@@ -1,0 +1,31 @@
+﻿<Window x:Class="UIAutomationController.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UI Automation Controller" Height="Auto" Width="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" DataContext="{Binding ElementName=LstTitles, Path=SelectedItem}">
+            <Button Height="23" Margin="5" Name="btnStartAutomation" VerticalAlignment="Top" Click="btnStartAutomation_Click">Start Automation</Button>
+            <TextBox x:Name="TxtWindowTitle"  HorizontalAlignment="Stretch" Height="23" TextWrapping="Wrap" Text="{Binding Path=WindowTitle}" VerticalAlignment="Top"/>
+            <Button Width="50" Height="20" Margin="5,5,5,5" x:Name="btnAddTitles" Click="btnAddWindowTitles_Click" Content="Add"></Button>
+        </StackPanel>
+        <ListView x:Name="LstTitles" Grid.Row="0" Grid.Column="1" Margin="5,5,5,5" >
+            <ListView.View>
+                <GridView x:Name="grdNames">
+                    <GridViewColumn Header="Titles" Width="Auto" DisplayMemberBinding="{Binding Path=WindowTitle}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <TextBox Grid.Row="1" Grid.ColumnSpan="2" x:Name="txtLogs"></TextBox>
+
+
+    </Grid>
+</Window>

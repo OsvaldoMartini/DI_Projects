@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="DI.WPF.One.Views.ToggleViewModel"
+             x:Name="UserControlToggle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Storyboard x:Key="SB_DisableButtons">
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="button">
+                <DiscreteBooleanKeyFrame KeyTime="0" Value="False"/>
+            </BooleanAnimationUsingKeyFrames>
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="button1">
+                <DiscreteBooleanKeyFrame KeyTime="0" Value="False"/>
+            </BooleanAnimationUsingKeyFrames>
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="button2">
+                <DiscreteBooleanKeyFrame KeyTime="0" Value="False"/>
+            </BooleanAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SB_EnableButtons">
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="button">
+                <DiscreteBooleanKeyFrame KeyTime="0" Value="True"/>
+            </BooleanAnimationUsingKeyFrames>
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="button1">
+                <DiscreteBooleanKeyFrame KeyTime="0" Value="True"/>
+            </BooleanAnimationUsingKeyFrames>
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="button2">
+                <DiscreteBooleanKeyFrame KeyTime="0" Value="True"/>
+            </BooleanAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="ToggleButton.Checked" SourceName="toggleButton">
+            <BeginStoryboard x:Name="SB_EnableButtons_BeginStoryboard" Storyboard="{StaticResource SB_EnableButtons}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ToggleButton.Unchecked" SourceName="toggleButton">
+            <BeginStoryboard x:Name="SB_DisableButtons_BeginStoryboard" Storyboard="{StaticResource SB_DisableButtons}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Width="78.257">
+            <ToggleButton x:Name="toggleButton" Content="ToggleButton" d:LayoutOverrides="Width"/>
+            <Button x:Name="button" Content="Button" IsEnabled="False"/>
+            <Button x:Name="button1" Content="Button" IsEnabled="False"/>
+            <Button x:Name="button2" Content="Button" IsEnabled="False"/>
+            <ToggleButton x:Name="toggleViewModel" Content="Toggle ViewModel" d:LayoutOverrides="Width" Command="{Binding ToggleViewCommand}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
