@@ -8,9 +8,9 @@ namespace UIAutomationController.ViewModel
         
         public WindowTitleVmCollection(Action itemPropertyChanged) : base(itemPropertyChanged)
         {
-            this.Add(new WindowTitleVM { WindowTitle = "UI Automation Test Window" });
             this.Add(new WindowTitleVM { WindowTitle = "DI WPF One" });
             this.Add(new WindowTitleVM { WindowTitle = "User Control Toggle" });
+            this.Add(new WindowTitleVM { WindowTitle = "UI Automation Test Window" });
         }
     }
 }

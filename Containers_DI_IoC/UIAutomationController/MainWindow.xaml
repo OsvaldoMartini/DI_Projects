@@ -24,7 +24,7 @@
             </ListView.View>
         </ListView>
 
-        <TextBox Grid.Row="1" Grid.ColumnSpan="2" x:Name="txtLogs"></TextBox>
+        <TextBox Grid.Row="1" Grid.ColumnSpan="2" x:Name="TxtLogs"></TextBox>
 
 
     </Grid>

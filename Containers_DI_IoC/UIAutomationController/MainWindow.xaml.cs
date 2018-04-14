@@ -116,11 +116,6 @@ namespace UIAutomationController
             return txtElement;
         }
 
-        private void DisplayLogMessage(string message)
-        {
-            txtLogs.Text += message;
-        }
-
         private void btnAddWindowTitles_Click(object sender, RoutedEventArgs e)
         {
             var obj = _WindowTestsViewModel.Where(p => p.WindowTitle.Contains(TxtWindowTitle.Text)).FirstOrDefault();
@@ -136,10 +131,16 @@ namespace UIAutomationController
             _WindowTestsViewModel.Add(new WindowTitleVM() { WindowTitle = message });
         }
 
+
+        private void DisplayLogMessage(string message)
+        {
+            TxtLogs.Text += message;
+        }
+
         
         private void LogMessage(string message)
         {
-            this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new SetMessageCallback(DisplayListWindowTests), message);
+            this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new SetMessageCallback(DisplayLogMessage), message);
         }
 
         private void WriteLogError()

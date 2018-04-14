@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AutomationTests", "Automati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIAutomationController", "UIAutomationController\UIAutomationController.csproj", "{1E1E2E28-8CB2-44A4-818F-B2BF68EAFA62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIAutomationTest", "UIAutomationTest\UIAutomationTest.csproj", "{00B6613A-0471-4AC8-9CCB-FC39E7D29D1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{1E1E2E28-8CB2-44A4-818F-B2BF68EAFA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E1E2E28-8CB2-44A4-818F-B2BF68EAFA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E1E2E28-8CB2-44A4-818F-B2BF68EAFA62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00B6613A-0471-4AC8-9CCB-FC39E7D29D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00B6613A-0471-4AC8-9CCB-FC39E7D29D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00B6613A-0471-4AC8-9CCB-FC39E7D29D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00B6613A-0471-4AC8-9CCB-FC39E7D29D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,5 +92,6 @@ Global
 		{C8F25C44-69FD-4696-AC72-624D4734FBDD} = {DFFAC0EC-C37A-422F-96BB-F383BF4A5FF9}
 		{F8DDA6E8-BC47-4CCC-9EEE-84E48E667209} = {E490527B-6F15-4728-AE2D-9A366D3FFD2B}
 		{1E1E2E28-8CB2-44A4-818F-B2BF68EAFA62} = {53643B5C-4839-4F88-BE21-4DE5AD6EB1C2}
+		{00B6613A-0471-4AC8-9CCB-FC39E7D29D1F} = {53643B5C-4839-4F88-BE21-4DE5AD6EB1C2}
 	EndGlobalSection
 EndGlobal
