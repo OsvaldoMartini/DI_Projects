@@ -41,7 +41,12 @@
     <Grid>
         <StackPanel HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Width="78.257">
             <ToggleButton x:Name="toggleButton" Content="ToggleButton" d:LayoutOverrides="Width"/>
-            <Button x:Name="button" Content="Button" IsEnabled="False"/>
+            <Button x:Name="button" IsEnabled="False" Click="button_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images\cross.png"/>
+                    <TextBlock Margin="3,0">Clear</TextBlock>
+                </StackPanel>
+            </Button>
             <Button x:Name="button1" Content="Button" IsEnabled="False"/>
             <Button x:Name="button2" Content="Button" IsEnabled="False"/>
             <ToggleButton x:Name="toggleViewModel" Content="Toggle ViewModel" d:LayoutOverrides="Width" Command="{Binding ToggleViewCommand}"/>

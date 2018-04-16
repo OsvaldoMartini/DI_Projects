@@ -1,0 +1,46 @@
+﻿<Window x:Class="MVVM_Checkbox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewmodel="clr-namespace:MVVM_Checkbox.ViewModel"
+        xmlns:converter="clr-namespace:MVVM_Checkbox.Converter"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <viewmodel:ViewModel x:Key="vm"></viewmodel:ViewModel>
+        <converter:MyConverter x:Key="cv"></converter:MyConverter>
+    </Window.Resources>
+    <StackPanel Orientation="Vertical" Margin="20" DataContext="{Binding Source={StaticResource vm}}">
+        <CheckBox Width="120" Name="cbIndia" Content="India" Command="{Binding MyCommand}">
+            <CheckBox.CommandParameter>
+                <MultiBinding Converter="{StaticResource cv}">
+                    <Binding ElementName="cbIndia" Path="Content"/>
+                    <Binding ElementName="cbIndia" Path="IsChecked"/>
+                </MultiBinding>
+            </CheckBox.CommandParameter>
+        </CheckBox>
+        <CheckBox Width="120" Name="cbUS" Content="US" Command="{Binding MyCommand}">
+            <CheckBox.CommandParameter>
+                <MultiBinding Converter="{StaticResource cv}">
+                    <Binding ElementName="cbUS" Path="Content"/>
+                    <Binding ElementName="cbUS" Path="IsChecked"/>
+                </MultiBinding>
+            </CheckBox.CommandParameter>
+        </CheckBox>
+        <CheckBox Width="120" Name="cbUK" Content="UK" Command="{Binding MyCommand}">
+            <CheckBox.CommandParameter>
+                <MultiBinding Converter="{StaticResource cv}">
+                    <Binding ElementName="cbUK" Path="Content"/>
+                    <Binding ElementName="cbUK" Path="IsChecked"/>
+                </MultiBinding>
+            </CheckBox.CommandParameter>
+        </CheckBox>
+        <CheckBox Width="120" Name="cbChina" Content="China" Command="{Binding MyCommand}">
+            <CheckBox.CommandParameter>
+                <MultiBinding Converter="{StaticResource cv}">
+                    <Binding ElementName="cbChina" Path="Content"/>
+                    <Binding ElementName="cbChina" Path="IsChecked"/>
+                </MultiBinding>
+            </CheckBox.CommandParameter>
+        </CheckBox>
+        <TextBox Width="300" Margin="20" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+    </StackPanel>
+</Window>

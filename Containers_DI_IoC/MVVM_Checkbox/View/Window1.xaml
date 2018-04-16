@@ -1,0 +1,12 @@
+﻿<Window x:Class="MVVM_Checkbox.View.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="350" Width="525">
+    <StackPanel Orientation="Vertical" Margin="20" >
+        <CheckBox Width="120" Name="cbIndia" Content="India"></CheckBox>
+        <CheckBox Width="120" Name="cbUS" Content="US"></CheckBox>
+        <CheckBox Width="120" Name="cbUK" Content="UK"></CheckBox>
+        <CheckBox Width="120" Name="cbChina" Content="China"></CheckBox>
+        <TextBox Width="300" Margin="20"></TextBox>
+    </StackPanel>
+</Window>
