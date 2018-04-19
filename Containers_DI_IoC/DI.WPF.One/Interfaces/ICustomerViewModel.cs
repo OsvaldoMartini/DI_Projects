@@ -3,6 +3,6 @@ namespace DI.WPF.One.Interfaces
 {
     public interface ICustomerViewModel :IViewModel
     {
-        Customer CustomerSelected { get; }
+        Customer CustomerObjSelected { get; }
     }
 }

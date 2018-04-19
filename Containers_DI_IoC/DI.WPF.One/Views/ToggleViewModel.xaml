@@ -43,7 +43,7 @@
             <ToggleButton x:Name="toggleButton" Content="ToggleButton" d:LayoutOverrides="Width"/>
             <Button x:Name="button" IsEnabled="False" Click="button_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="Images\cross.png"/>
+                    <Image Source="Images/cross.png"/>
                     <TextBlock Margin="3,0">Clear</TextBlock>
                 </StackPanel>
             </Button>

@@ -17,9 +17,9 @@ namespace DI.WPF.One.ViewModel
             }
         }
 
+        #region CustomerListViewModel
         private ICustomerListViewModel _CustomerListViewModel;
-        public IViewModel _CurrentViewModel;
-
+        
         public ICustomerListViewModel CustomerListViewModel
         {
             get { return _CustomerListViewModel; }
@@ -30,9 +30,27 @@ namespace DI.WPF.One.ViewModel
                 SetPropertyChanged("CustomerListViewModel");
             }
         }
+        #endregion
+
+        #region  CustomerViewModel
         private ICustomerViewModel _CustomerViewModel;
-        
-        
+        public ICustomerViewModel CustomerViewModel
+        {
+            get { return _CustomerViewModel; }
+
+            set
+            {
+                _CustomerViewModel = value;
+                SetPropertyChanged("CustomerViewModel");
+            }
+        }
+        #endregion
+
+
+        #region CurrentViewModel;
+
+        public IViewModel _CurrentViewModel;
+
         public IViewModel CurrentViewModel
         {
             get { return _CurrentViewModel; }
@@ -43,7 +61,8 @@ namespace DI.WPF.One.ViewModel
                 SetPropertyChanged("CurrentViewModel");
             }
         }
-        
+        #endregion
+
 
         public MainWindowViewModel(ICustomerListViewModel customerListViewModel, ICustomerViewModel customerViewModel)
         {
@@ -51,7 +70,7 @@ namespace DI.WPF.One.ViewModel
             _CustomerListViewModel = customerListViewModel;
             _CustomerViewModel = customerViewModel;
 
-            CurrentViewModel = _CustomerListViewModel;
+            CurrentViewModel = _CustomerViewModel;
             ToggleViewCommand = new ToggleViewCommand((p) => OnToggleViewCommand());
 
 

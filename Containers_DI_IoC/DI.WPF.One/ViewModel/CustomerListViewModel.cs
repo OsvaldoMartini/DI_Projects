@@ -8,22 +8,22 @@ namespace DI.WPF.One.ViewModel
 {
     public class CustomerListViewModel : ViewModelBase, ICustomerListViewModel
     {
-   
-        private ObservableCollection<Customer> _customerObjectCollection;
-        public ObservableCollection<Customer> CustomerObjectCollection
+
+        private ObservableCollection<Customer> _customerObjCollection;
+        public ObservableCollection<Customer> CustomerObjCollection
         {
-            get { return _customerObjectCollection; }
+            get { return _customerObjCollection; }
             set
             {
-                if (value != this._customerObjectCollection)
-                    _customerObjectCollection = value;
-                this.SetPropertyChanged("CustomerObjectCollection");
+                if (value != this._customerObjCollection)
+                    _customerObjCollection = value;
+                this.SetPropertyChanged("CustomerObjCollection");
             }
         }
 
         public CustomerListViewModel(ICustomerRepository customerRepository)
         {
-            _customerObjectCollection = new ObservableCollection<Customer>(customerRepository.GetAll());
+            _customerObjCollection = new ObservableCollection<Customer>(customerRepository.GetAll());
 
         }
 

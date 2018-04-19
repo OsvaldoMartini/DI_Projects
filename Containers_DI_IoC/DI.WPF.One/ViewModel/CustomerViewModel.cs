@@ -8,14 +8,14 @@ namespace DI.WPF.One.ViewModel
     {
 
         private Customer _CustomerSelected;
-        public Customer CustomerSelected
+        public Customer CustomerObjSelected
         {
             get { return _CustomerSelected; }
             set
             {
                 if (value != this._CustomerSelected)
                     _CustomerSelected = value;
-                this.SetPropertyChanged("CustomerSelected");
+                this.SetPropertyChanged("CustomerObjSelected");
             }
         }
 

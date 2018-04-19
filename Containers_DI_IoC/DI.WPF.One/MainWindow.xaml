@@ -7,8 +7,38 @@
     <Grid>
         <StackPanel Orientation="Vertical">
         <views:ToggleViewModel/>
-        <ContentControl Content="{Binding CurrentViewModel}">
-        </ContentControl>
+            <Grid DataContext="{Binding CurrentViewModel}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0"  DataContext="{Binding CustomerObjCollection}">
+                <ListView ItemsSource="{Binding}">
+                    <ListView.View>
+                        <GridView AllowsColumnReorder="true"
+                                  ColumnHeaderToolTip="Employee Information">
+                            <GridViewColumn DisplayMemberBinding=
+                                            "{Binding Path=Id}" 
+                                            Header="Customer Id" Width="50"/>
+                            <GridViewColumn DisplayMemberBinding=
+                                            "{Binding Path=Name}" 
+                                            Header="Customer Name" Width="50"/>
+
+                            <GridViewColumn DisplayMemberBinding=
+                                            "{Binding Path=Address}" 
+                                            Header="Customer Address" Width="50"/>
+                        </GridView>
+
+                    </ListView.View>
+                </ListView>
+                </Grid>
+                <StackPanel Grid.Row="1" Orientation="Vertical">
+                    <TextBlock Text="{Binding Path=CustomerId}"></TextBlock>
+                    <TextBlock Text="{Binding Path=CustomerName}"></TextBlock>
+                    <TextBlock Text="{Binding Path=CustomerAddress}"></TextBlock>
+                </StackPanel>
+            </Grid>
         </StackPanel>
-    </Grid>
+
+</Grid>
 </Window>
