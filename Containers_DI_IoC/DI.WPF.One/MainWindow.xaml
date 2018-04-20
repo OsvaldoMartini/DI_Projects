@@ -6,14 +6,13 @@
         Title="DI WPF One" Height="350" Width="525">
     <Grid>
         <StackPanel Orientation="Vertical">
-        <views:ToggleViewModel/>
+            <views:ToggleViewModel/>
             <Grid DataContext="{Binding CurrentViewModel}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0"  DataContext="{Binding CustomerObjCollection}">
-                <ListView ItemsSource="{Binding}">
+                <ListView Grid.Row="0"  ItemsSource="{Binding CustomerObjCollection}" SelectedItem="{Binding SelectedCustomerObject}" SelectionMode="Single">
                     <ListView.View>
                         <GridView AllowsColumnReorder="true"
                                   ColumnHeaderToolTip="Employee Information">
@@ -31,7 +30,6 @@
 
                     </ListView.View>
                 </ListView>
-                </Grid>
                 <StackPanel Grid.Row="1" Orientation="Vertical">
                     <TextBlock Text="{Binding Path=CustomerId}"></TextBlock>
                     <TextBlock Text="{Binding Path=CustomerName}"></TextBlock>
@@ -40,5 +38,5 @@
             </Grid>
         </StackPanel>
 
-</Grid>
+    </Grid>
 </Window>

@@ -1,6 +1,7 @@
 ﻿using DI.Abstraction.BusinessObjects;
 using DI.Abstraction.Interfaces;
 using DI.Abstraction.Models;
+using DI.Mediator.Business;
 using Moq;
 using NUnit.Framework;
 
@@ -33,6 +34,8 @@ namespace Mocking.IoC.DI
             //Assert
             Assert.IsTrue(1 == 1); //this Test just asserts that ProcessOrder can be called
         }
+
+
 
     }
 }

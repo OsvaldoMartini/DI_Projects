@@ -21,17 +21,26 @@ namespace DI.WPF.One.ViewModel
             }
         }
 
+        private Customer _selectedCustomerObject;
+        public Customer SelectedCustomerObject
+        {
+
+            //Esta propriedade deve ser sincronizada com CustomerViewModel
+            //Talvez por "Messager" ou Mediator
+
+            get { return _selectedCustomerObject; }
+            set
+            {
+                if (value != this._selectedCustomerObject)
+                    _selectedCustomerObject = value;
+                this.SetPropertyChanged("SelectedCustomerObject");
+            }
+        }
         public CustomerListViewModel(ICustomerRepository customerRepository)
         {
             _customerObjCollection = new ObservableCollection<Customer>(customerRepository.GetAll());
 
         }
-
-        //private Action<Customer> SetFileObjectCollection()
-        //{
-        //    this._fileObjectCollection = new ObservableCollection<FileObject>();
-        //    return f => this._fileObjectCollection.Add(new FileObject { FileName = f.Name, Location = f.DirectoryName });
-        //}
 
 
     }
