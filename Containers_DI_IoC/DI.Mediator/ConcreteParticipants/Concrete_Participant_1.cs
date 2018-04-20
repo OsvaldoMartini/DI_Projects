@@ -10,17 +10,18 @@ namespace DI.Mediator.ConcreteParticipants
 
     /// </summary>
 
-    class Concrete_NonBeatle : Abstract_Participant
+    class Concrete_Participant_1 : Abstract_Participant
+
     {
         // Constructor
 
-        public Concrete_NonBeatle(string name): base(name)
+        public Concrete_Participant_1(string name): base(name)
         {
         }
 
         public override void Receive(string from, string message)
         {
-            Debug.Write("To a non-Beatle: ");
+            Debug.Write("To a Beatle: ");
             base.Receive(from, message);
         }
     }

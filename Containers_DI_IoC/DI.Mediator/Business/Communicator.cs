@@ -33,11 +33,11 @@ namespace DI.Mediator.Business
  
              //Create participants and register them
 
-            Abstract_Participant George = new Concrete_Beatle("George");
-            Abstract_Participant Paul = new Concrete_Beatle("Paul");
-            Abstract_Participant Ringo = new Concrete_Beatle("Ringo");
-            Abstract_Participant John = new Concrete_Beatle("John");
-            Abstract_Participant Yoko = new Concrete_NonBeatle("Yoko");
+            Abstract_Participant George = new Concrete_Participant_1("George");
+            Abstract_Participant Paul = new Concrete_Participant_1("Paul");
+            Abstract_Participant Ringo = new Concrete_Participant_1("Ringo");
+            Abstract_Participant John = new Concrete_Participant_1("John");
+            Abstract_Participant Yoko = new Concrete_Participant_2("Yoko");
  
             chatroom.Register(George);
             chatroom.Register(Paul);    

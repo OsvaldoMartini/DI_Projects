@@ -46,8 +46,8 @@
     <Compile Include="ConcreteCollegues\Concrete_Colleague_2.cs" />
     <Compile Include="ConcreteMediators\ConcreteChatRoom.cs" />
     <Compile Include="ConcreteMediators\ConcreteMediator.cs" />
-    <Compile Include="ConcreteParticipants\Concrete_Beatle.cs" />
-    <Compile Include="ConcreteParticipants\Concrete_NonBeatle.cs" />
+    <Compile Include="ConcreteParticipants\Concrete_Participant_1.cs" />
+    <Compile Include="ConcreteParticipants\Concrete_Participant_2.cs" />
     <Compile Include="Mediators\AMediatorChatRoom.cs" />
     <Compile Include="Mediators\AMediatorColleagues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

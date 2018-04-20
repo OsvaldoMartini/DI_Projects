@@ -16,21 +16,6 @@ namespace DI.Mediator.Abstracts
         protected AMediatorChatRoom _chatroom;
         private string _name;
 
-        // Constructor
-
-        //private int[] _elements;
-
-        //public int this[int index] //Indexed property
-        //{
-        //    get { return this._elements[index]; }
-        //    set
-        //    {
-        //        //Do any checks on the index and value
-        //        this._elements[index] = value;
-        //    }
-        //}
-
-
         public Abstract_Participant(string name)
         {
             this._name = name;
