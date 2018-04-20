@@ -1,20 +1,27 @@
-﻿using System.Windows.Input;
+﻿using System.Linq;
+using System.Windows.Input;
 using DI.WPF.One.Commands;
 using DI.WPF.One.Interfaces;
+using DI.WPF.One.Model;
 
 namespace DI.WPF.One.ViewModel
 {
     public class MainWindowViewModel: ViewModelBase, IViewModel,IMainWindowViewModel
     {
         public ICommand ToggleViewCommand { get; private set; }
+
         public void OnToggleViewCommand()
         {
             if (_CurrentViewModel.Equals(_CustomerListViewModel))
+            {
+                Send("Sending Customer Obj", CustomerListViewModel.SelectedCustomerObject);
                 CurrentViewModel = _CustomerViewModel;
+            }
             else
             {
                 CurrentViewModel = _CustomerListViewModel;
             }
+
         }
 
         #region CustomerListViewModel
@@ -62,7 +69,6 @@ namespace DI.WPF.One.ViewModel
             }
         }
         #endregion
-
 
         public MainWindowViewModel(ICustomerListViewModel customerListViewModel, ICustomerViewModel customerViewModel)
         {

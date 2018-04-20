@@ -9,10 +9,11 @@ namespace DI.Mediator.Mediators
 
     /// </summary>
 
-    abstract class AMediatorColleagues
+    abstract class AbstractMediator
     {
         //Abstractions for Collegues Stories
         public abstract void Send(string message, Abstract_Collegue colleague);
+
 
     }
 }

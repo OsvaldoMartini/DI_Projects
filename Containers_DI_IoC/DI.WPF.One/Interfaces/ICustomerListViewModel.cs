@@ -6,5 +6,7 @@ namespace DI.WPF.One.Interfaces
     public interface ICustomerListViewModel : IViewModel
     {
         ObservableCollection<Customer> CustomerObjCollection { get; }
+
+        Customer SelectedCustomerObject { get; }
     }
 }

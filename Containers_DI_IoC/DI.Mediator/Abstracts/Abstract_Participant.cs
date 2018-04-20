@@ -11,9 +11,8 @@ namespace DI.Mediator.Abstracts
     /// </summary>
 
     abstract class Abstract_Participant
-
     {
-        protected AMediatorChatRoom _chatroom;
+        protected AbstractChatMediator _chatroom;
         private string _name;
 
         public Abstract_Participant(string name)
@@ -30,7 +29,7 @@ namespace DI.Mediator.Abstracts
 
         // Gets chatroom
 
-        public AMediatorChatRoom Chatroom
+        public AbstractChatMediator Chatroom
         {
             set { _chatroom = value; }
             get { return _chatroom; }

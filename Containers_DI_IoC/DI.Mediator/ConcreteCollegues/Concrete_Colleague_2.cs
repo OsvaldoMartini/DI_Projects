@@ -15,7 +15,7 @@ namespace DI.Mediator.ConcreteCollegues
     {
         // Constructor
 
-        public Concrete_Colleague_2(AMediatorColleagues mediator): base(mediator)
+        public Concrete_Colleague_2(AbstractMediator mediator): base(mediator)
         {
         }
 

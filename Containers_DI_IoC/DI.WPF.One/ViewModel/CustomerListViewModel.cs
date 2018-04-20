@@ -8,7 +8,6 @@ namespace DI.WPF.One.ViewModel
 {
     public class CustomerListViewModel : ViewModelBase, ICustomerListViewModel
     {
-
         private ObservableCollection<Customer> _customerObjCollection;
         public ObservableCollection<Customer> CustomerObjCollection
         {
@@ -38,10 +37,11 @@ namespace DI.WPF.One.ViewModel
         }
         public CustomerListViewModel(ICustomerRepository customerRepository)
         {
+
             _customerObjCollection = new ObservableCollection<Customer>(customerRepository.GetAll());
 
         }
 
-
+       
     }
 }

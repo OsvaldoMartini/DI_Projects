@@ -9,9 +9,7 @@ namespace DI.Mediator.ConcreteMediators
     /// The 'ConcreteMediator' class
 
     /// </summary>
-
-    class ConcreteChatRoom : AMediatorChatRoom
-
+    class ConcreteChatRoom : AbstractChatMediator
     {
         private Dictionary<string, Abstract_Participant> _participants = new Dictionary<string, Abstract_Participant>();
 
@@ -25,8 +23,7 @@ namespace DI.Mediator.ConcreteMediators
             participant.Chatroom = this;
         }
 
-        public override void Send(
-            string from, string to, string message)
+        public override void Send(string from, string to, string message)
         {
             Abstract_Participant participant = _participants[to];
 

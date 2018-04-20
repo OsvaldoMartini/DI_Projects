@@ -10,13 +10,12 @@ namespace DI.Mediator.ConcreteMediators
 
     /// </summary>
 
-    class ConcreteMediator : AMediatorColleagues
+    class ConcreteMediator : AbstractMediator
 
 
     {
         private Concrete_Colleague_1 _colleague1;
         private Concrete_Colleague_2 _colleague2;
-
         public Concrete_Colleague_1 Colleague1
         {
             set { _colleague1 = value; }

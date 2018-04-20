@@ -1,12 +1,13 @@
-﻿using DI.WPF.One.Interfaces;
+﻿using System.Diagnostics;
+using DI.WPF.One.Interfaces;
+using DI.WPF.One.Mediators;
 using DI.WPF.One.Model;
 using DI.WPF.One.Repository;
 
 namespace DI.WPF.One.ViewModel
 {
-    public class CustomerViewModel:ViewModelBase,ICustomerViewModel
+    public class CustomerViewModel: ViewModelBase,ICustomerViewModel
     {
-
         private Customer _CustomerSelected;
         public Customer CustomerObjSelected
         {
@@ -17,6 +18,11 @@ namespace DI.WPF.One.ViewModel
                     _CustomerSelected = value;
                 this.SetPropertyChanged("CustomerObjSelected");
             }
+        }
+
+        public void Notify(string message)
+        {
+            Debug.WriteLine("ViewModel gets message: " + message);
         }
 
         public CustomerViewModel()
