@@ -59,9 +59,9 @@
     </ApplicationDefinition>
     <Compile Include="Commands\ToggleViewCommand.cs" />
     <Compile Include="Mediators\AbstractViewModel.cs" />
+    <Compile Include="Mediators\AutofactResolver.cs" />
     <Compile Include="Mediators\ConcreteMediator.cs" />
     <Compile Include="Mediators\MediatorViewModel.cs" />
-    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="Repository\ICustomerRepository.cs" />
     <Compile Include="ViewModel\CustomerListViewModel.cs" />

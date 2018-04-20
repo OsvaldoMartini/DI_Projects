@@ -21,6 +21,11 @@ namespace DI.WPF.One
             builder.RegisterType<CustomerListViewModel>().As<ICustomerListViewModel>();
             builder.RegisterType<CustomerViewModel>().As<ICustomerViewModel>();
             builder.RegisterType<CustomerRepository>().As<ICustomerRepository>();
+            
+            //builder.RegisterType<ConcreteMediator>();
+            //builder.Register<CustomerViewModel>(b => new CustomerViewModel(b.Resolve<CustomerRepository>()));
+            //builder.Register<ConcreteMediator>(b => new ConcreteMediator(b.Resolve<CustomerViewModel>()));
+            //builder.Register<CustomerListViewModel>(b => new CustomerListViewModel(b.Resolve<ConcreteMediator>()))
 
             Container = builder.Build();
 

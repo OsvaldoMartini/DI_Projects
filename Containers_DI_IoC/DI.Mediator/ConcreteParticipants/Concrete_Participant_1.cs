@@ -18,6 +18,8 @@ namespace DI_Mediator.ConcreteParticipants
         {
         }
 
+        //Concrete Mediator Calls the Receiver via 
+        //override and base
         public override void Receive(string from, string message)
         {
             Debug.Write("To a Beatle: ");

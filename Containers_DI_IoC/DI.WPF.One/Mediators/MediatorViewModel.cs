@@ -13,7 +13,7 @@ namespace DI.WPF.One.Mediators
     /// The 'Mediator' abstract class
 
     /// </summary>
-    abstract class MediatorViewModel
+    public abstract class MediatorViewModel
     {
         //public abstract void Register(IViewModel vieModel);
         
@@ -25,6 +25,6 @@ namespace DI.WPF.One.Mediators
         
         public abstract void Send(string message, AbstractViewModel viewModel);
 
-        //public abstract void Send(string message, Customer viewModel);
+        public abstract void SendCustomer(string message, Customer customer);
     }
 }

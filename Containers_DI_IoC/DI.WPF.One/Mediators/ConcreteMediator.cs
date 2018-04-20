@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DI.WPF.One.Interfaces;
+using DI.WPF.One.Model;
+using DI.WPF.One.ViewModel;
 
 namespace DI.WPF.One.Mediators
 {
@@ -12,31 +14,45 @@ namespace DI.WPF.One.Mediators
     /// The 'ConcreteMediator' class
 
     /// </summary>
-
-    abstract class ConcreteMediator : MediatorViewModel
+    public class ConcreteMediator : MediatorViewModel
     {
-        private IViewModel _CustomerViewModel;
-        private IViewModel _CustomerListViewModel;
-        public ICustomerViewModel CustomerViewModel
+        private CustomerViewModel _CustomerViewModel;
+        //private CustomerListViewModel _CustomerListViewModel;
+        //public ICustomerViewModel CustomerViewModel
+        //{
+        //    get { return _CustomerViewModel; }
+        //    set { _CustomerViewModel = value; }
+        //}
+
+        //public ICustomerListViewModel CustomerListViewModel
+        //{
+        //    get { return _CustomerListViewModel; }
+        //    set { _CustomerListViewModel = value; }
+        //}
+
+        public ConcreteMediator(CustomerViewModel customerViewModel)
         {
-            set { _CustomerViewModel = value; }
+            this._CustomerViewModel = customerViewModel;
         }
 
-        public ICustomerListViewModel CustomerListViewModel
+        public override void Send(string message, AbstractViewModel viewModel)
         {
-            set { _CustomerListViewModel = value; }
+            //throw new NotImplementedException();
         }
 
-        public override void Send(string message, AbstractViewModel customerView)
+        public override void SendCustomer(string message, Customer customer)
         {
-            //if (colleague == _colleague1)
+            //Call Reveice Client
+            //if (_CustomerViewModel == viewModel)
             //{
-            //    _colleague2.Notify(message);
+           // _CustomerViewModel.Receiver(message, customer);
             //}
             //else
-            //{
-            //    _colleague1.Notify(message);
-            //}
+           // {
+                //CustomerViewModel.Receiver(message, customer);
+
+            //CustomerObjSelected}
+            
         }
 
     }

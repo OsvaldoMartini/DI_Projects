@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Autofac;
 using DI.WPF.One.Model;
 
 namespace DI.WPF.One.Mediators
@@ -14,7 +15,7 @@ namespace DI.WPF.One.Mediators
 
     /// </summary>
 
-    abstract class AbstractViewModel
+    public abstract class AbstractViewModel
     {
         
         // Gets ViemModel name
@@ -25,11 +26,18 @@ namespace DI.WPF.One.Mediators
         }
 
         protected MediatorViewModel _mediator;
+
         //By Constructor
-        //public ViewModelBase(ViewModelMediator mediator)
-        //{
-        //    this._mediator = mediator;
-        //}
+        protected AbstractViewModel(ConcreteMediator mediator)
+        {
+            this._mediator = mediator;
+        }
+
+        protected AbstractViewModel()
+        {
+           
+        }
+
 
         //By Property
         public MediatorViewModel Mediator
@@ -54,6 +62,14 @@ namespace DI.WPF.One.Mediators
         {
              _mediator.Send(message, viewModel);
         }
+
+        public virtual void SendCustomer(string message, Customer customer)
+        {
+            //App.Container.Resolve<ConcreteMediator>().CustomerViewModel;
+            _mediator.SendCustomer(message, customer);
+        }
+    
+
 
         // Receives message from given ViewModel
         public virtual void Receive(

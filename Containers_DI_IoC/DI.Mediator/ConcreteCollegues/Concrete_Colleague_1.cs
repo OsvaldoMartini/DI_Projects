@@ -25,6 +25,8 @@ namespace DI_Mediator.ConcreteCollegues
        mediator.Send(message, this);
     }
  
+    //Concrete Mediator Calls the Receiver via 
+    //override Send
     public void Notify(string message)
     {
         Debug.WriteLine("Colleague1 gets message: "
