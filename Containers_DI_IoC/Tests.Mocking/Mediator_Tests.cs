@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DI.Mediator.Business;
+using DI_Mediator.Business;
 using NUnit.Framework;
 
 namespace Mocking.IoC.DI

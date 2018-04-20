@@ -1,8 +1,8 @@
-﻿using DI.Mediator.Abstracts;
-using DI.Mediator.ConcreteCollegues;
-using DI.Mediator.Mediators;
+﻿using DI_Mediator.Abstracts;
+using DI_Mediator.ConcreteCollegues;
+using DI_Mediator.Mediators;
 
-namespace DI.Mediator.ConcreteMediators
+namespace DI_Mediator.ConcreteMediators
 {
     /// <summary>
 
@@ -10,7 +10,7 @@ namespace DI.Mediator.ConcreteMediators
 
     /// </summary>
 
-    class ConcreteMediator : AbstractMediator
+    class ConcreteMediator : Mediator
 
 
     {

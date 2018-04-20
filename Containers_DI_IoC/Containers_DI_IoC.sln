@@ -39,7 +39,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM_Checkbox", "MVVM_Check
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DI.Mediator", "DI.Mediator", "{4DFD3DA4-E925-4FC4-A2BF-DB830D9C4C54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI.Mediator", "DI.Mediator\DI.Mediator.csproj", "{068E1E2B-12C0-4301-BA60-3159860C5B64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI_Mediator", "DI.Mediator\DI_Mediator.csproj", "{068E1E2B-12C0-4301-BA60-3159860C5B64}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mocking.IoC.DI", "Tests.Mocking\Mocking.IoC.DI.csproj", "{F8DDA6E8-BC47-4CCC-9EEE-84E48E667209}"
 EndProject

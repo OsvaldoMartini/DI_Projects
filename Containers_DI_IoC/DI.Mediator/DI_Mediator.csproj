@@ -7,8 +7,8 @@
     <ProjectGuid>{068E1E2B-12C0-4301-BA60-3159860C5B64}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DI.Mediator</RootNamespace>
-    <AssemblyName>DI.Mediator</AssemblyName>
+    <RootNamespace>DI_Mediator</RootNamespace>
+    <AssemblyName>DI_Mediator</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,8 +48,8 @@
     <Compile Include="ConcreteMediators\ConcreteMediator.cs" />
     <Compile Include="ConcreteParticipants\Concrete_Participant_1.cs" />
     <Compile Include="ConcreteParticipants\Concrete_Participant_2.cs" />
-    <Compile Include="Mediators\AbstractChatMediator.cs" />
-    <Compile Include="Mediators\AbstractMediator.cs" />
+    <Compile Include="Mediators\MediatorChat.cs" />
+    <Compile Include="Mediators\Mediator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

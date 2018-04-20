@@ -32,7 +32,10 @@ namespace DI.WPF.One.ViewModel
             {
                 if (value != this._selectedCustomerObject)
                     _selectedCustomerObject = value;
+                
                 this.SetPropertyChanged("SelectedCustomerObject");
+                //Send("Sending Customer Obj", SelectedCustomerObject);
+
             }
         }
         public CustomerListViewModel(ICustomerRepository customerRepository)

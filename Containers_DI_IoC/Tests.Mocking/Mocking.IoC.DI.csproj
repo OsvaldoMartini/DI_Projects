@@ -80,9 +80,9 @@
       <Project>{3b1141a1-2ff5-48cd-8956-a1e893cbca5d}</Project>
       <Name>DI.Abstraction</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DI.Mediator\DI.Mediator.csproj">
+    <ProjectReference Include="..\DI.Mediator\DI_Mediator.csproj">
       <Project>{068e1e2b-12c0-4301-ba60-3159860c5b64}</Project>
-      <Name>DI.Mediator</Name>
+      <Name>DI_Mediator</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

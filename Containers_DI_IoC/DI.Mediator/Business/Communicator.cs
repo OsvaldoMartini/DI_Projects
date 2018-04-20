@@ -1,11 +1,10 @@
-﻿using System;
-using System.Diagnostics;
-using DI.Mediator.Abstracts;
-using DI.Mediator.ConcreteCollegues;
-using DI.Mediator.ConcreteMediators;
-using DI.Mediator.ConcreteParticipants;
+﻿using System.Diagnostics;
+using DI_Mediator.Abstracts;
+using DI_Mediator.ConcreteCollegues;
+using DI_Mediator.ConcreteMediators;
+using DI_Mediator.ConcreteParticipants;
 
-namespace DI.Mediator.Business
+namespace DI_Mediator.Business
 {
     public class Communicator
     {

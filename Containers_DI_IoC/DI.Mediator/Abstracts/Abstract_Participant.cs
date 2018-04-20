@@ -1,8 +1,7 @@
-﻿using System;
-using System.Diagnostics;
-using DI.Mediator.Mediators;
+﻿using System.Diagnostics;
+using DI_Mediator.Mediators;
 
-namespace DI.Mediator.Abstracts
+namespace DI_Mediator.Abstracts
 {
     /// <summary>
 
@@ -12,7 +11,7 @@ namespace DI.Mediator.Abstracts
 
     abstract class Abstract_Participant
     {
-        protected AbstractChatMediator _chatroom;
+        protected MediatorChat _chatroom;
         private string _name;
 
         public Abstract_Participant(string name)
@@ -29,7 +28,7 @@ namespace DI.Mediator.Abstracts
 
         // Gets chatroom
 
-        public AbstractChatMediator Chatroom
+        public MediatorChat Chatroom
         {
             set { _chatroom = value; }
             get { return _chatroom; }

@@ -1,7 +1,6 @@
 ﻿using DI.Abstraction.BusinessObjects;
 using DI.Abstraction.Interfaces;
 using DI.Abstraction.Models;
-using DI.Mediator.Business;
 using Moq;
 using NUnit.Framework;
 

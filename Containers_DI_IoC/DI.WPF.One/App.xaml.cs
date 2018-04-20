@@ -17,7 +17,7 @@ namespace DI.WPF.One
         protected override void OnStartup(StartupEventArgs e)
         {
             ContainerBuilder builder = new ContainerBuilder();
-            builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>();
+            builder.RegisterType<MainWindowViewModel>().As<IMainWindowViewModel>().PropertiesAutowired();
             builder.RegisterType<CustomerListViewModel>().As<ICustomerListViewModel>();
             builder.RegisterType<CustomerViewModel>().As<ICustomerViewModel>();
             builder.RegisterType<CustomerRepository>().As<ICustomerRepository>();

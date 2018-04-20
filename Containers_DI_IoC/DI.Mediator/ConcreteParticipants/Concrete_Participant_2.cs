@@ -1,8 +1,7 @@
-﻿using System;
-using System.Diagnostics;
-using DI.Mediator.Abstracts;
+﻿using System.Diagnostics;
+using DI_Mediator.Abstracts;
 
-namespace DI.Mediator.ConcreteParticipants
+namespace DI_Mediator.ConcreteParticipants
 {
     /// <summary>
 

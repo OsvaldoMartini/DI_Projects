@@ -1,6 +1,6 @@
-﻿using DI.Mediator.Mediators;
+﻿using DI_Mediator.Mediators;
 
-namespace DI.Mediator.Abstracts
+namespace DI_Mediator.Abstracts
 {
     /// <summary>
 
@@ -10,11 +10,11 @@ namespace DI.Mediator.Abstracts
 
     abstract class Abstract_Collegue
     {
-        protected AbstractMediator mediator;
+        protected Mediator mediator;
 
         // Constructor
 
-        public Abstract_Collegue(AbstractMediator mediator)
+        public Abstract_Collegue(Mediator mediator)
         {
             this.mediator = mediator;
         }

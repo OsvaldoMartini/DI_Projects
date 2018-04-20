@@ -1,6 +1,6 @@
-﻿using DI.Mediator.Abstracts;
+﻿using DI_Mediator.Abstracts;
 
-namespace DI.Mediator.Mediators
+namespace DI_Mediator.Mediators
 {
 
     /// <summary>
@@ -9,7 +9,7 @@ namespace DI.Mediator.Mediators
 
     /// </summary>
 
-    abstract class AbstractMediator
+    abstract class Mediator
     {
         //Abstractions for Collegues Stories
         public abstract void Send(string message, Abstract_Collegue colleague);

@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
-using DI.Mediator.Abstracts;
-using DI.Mediator.Mediators;
+using DI_Mediator.Abstracts;
+using DI_Mediator.Mediators;
 
-namespace DI.Mediator.ConcreteMediators
+namespace DI_Mediator.ConcreteMediators
 {
     /// <summary>
 
     /// The 'ConcreteMediator' class
 
     /// </summary>
-    class ConcreteChatRoom : AbstractChatMediator
+    class ConcreteChatRoom : MediatorChat
     {
         private Dictionary<string, Abstract_Participant> _participants = new Dictionary<string, Abstract_Participant>();
 

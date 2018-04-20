@@ -1,9 +1,8 @@
-﻿using System;
-using DI.Mediator.Abstracts;
-using DI.Mediator.Mediators;
-using System.Diagnostics;
+﻿using System.Diagnostics;
+using DI_Mediator.Abstracts;
+using DI_Mediator.Mediators;
 
-namespace DI.Mediator.ConcreteCollegues
+namespace DI_Mediator.ConcreteCollegues
 {
     /// <summary>
 
@@ -16,7 +15,7 @@ namespace DI.Mediator.ConcreteCollegues
   {
     // Constructor
 
-        public Concrete_Colleague_1(AbstractMediator mediator)
+        public Concrete_Colleague_1(Mediator mediator)
             : base(mediator)
     {
     }

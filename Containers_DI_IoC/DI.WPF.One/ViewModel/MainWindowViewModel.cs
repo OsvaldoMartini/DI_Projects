@@ -6,6 +6,12 @@ using DI.WPF.One.Model;
 
 namespace DI.WPF.One.ViewModel
 {
+    /// <summary>
+
+    /// The 'ConcreteMediator' class
+
+    /// </summary>
+
     public class MainWindowViewModel: ViewModelBase, IViewModel,IMainWindowViewModel
     {
         public ICommand ToggleViewCommand { get; private set; }
@@ -14,7 +20,6 @@ namespace DI.WPF.One.ViewModel
         {
             if (_CurrentViewModel.Equals(_CustomerListViewModel))
             {
-                Send("Sending Customer Obj", CustomerListViewModel.SelectedCustomerObject);
                 CurrentViewModel = _CustomerViewModel;
             }
             else
@@ -27,7 +32,7 @@ namespace DI.WPF.One.ViewModel
         #region CustomerListViewModel
         private ICustomerListViewModel _CustomerListViewModel;
         
-        public ICustomerListViewModel CustomerListViewModel
+        ICustomerListViewModel CustomerListViewModel
         {
             get { return _CustomerListViewModel; }
 

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DI.Mediator.Abstracts;
+﻿using DI_Mediator.Abstracts;
 
-namespace DI.Mediator.Mediators
+namespace DI_Mediator.Mediators
 {
-    abstract class AbstractChatMediator
+    abstract class MediatorChat
     {
         //Abstractions for the Participants in a Chat Room Story
         public abstract void Register(Abstract_Participant participant);
