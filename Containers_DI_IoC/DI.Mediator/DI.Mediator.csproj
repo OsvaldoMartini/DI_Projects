@@ -48,8 +48,8 @@
     <Compile Include="ConcreteMediators\ConcreteMediator.cs" />
     <Compile Include="ConcreteParticipants\Concrete_Beatle.cs" />
     <Compile Include="ConcreteParticipants\Concrete_NonBeatle.cs" />
-    <Compile Include="Mediators\AbstracteChatRoom.cs" />
-    <Compile Include="Mediators\AbstractMediator.cs" />
+    <Compile Include="Mediators\AMediatorChatRoom.cs" />
+    <Compile Include="Mediators\AMediatorColleagues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -20,7 +20,7 @@ namespace DI.Mediator.Mediators
     ///  The 'Mediator' abstract class
     /// </summary>
 
-    abstract class AbstracteChatRoom
+    abstract class AMediatorChatRoom
     {
         //Abstractions for the Participants in a Chat Room Story
         public abstract void Register(Abstract_Participant participant);

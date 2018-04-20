@@ -10,7 +10,7 @@ namespace DI.Mediator.ConcreteMediators
 
     /// </summary>
 
-    class ConcreteChatRoom : AbstracteChatRoom
+    class ConcreteChatRoom : AMediatorChatRoom
 
     {
         private Dictionary<string, Abstract_Participant> _participants = new Dictionary<string, Abstract_Participant>();

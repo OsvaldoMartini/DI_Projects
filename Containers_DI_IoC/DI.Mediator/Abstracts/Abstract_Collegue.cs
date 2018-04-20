@@ -10,11 +10,11 @@ namespace DI.Mediator.Abstracts
 
     abstract class Abstract_Collegue
     {
-        protected AbstractMediator mediator;
+        protected AMediatorColleagues mediator;
 
         // Constructor
 
-        public Abstract_Collegue(AbstractMediator mediator)
+        public Abstract_Collegue(AMediatorColleagues mediator)
         {
             this.mediator = mediator;
         }

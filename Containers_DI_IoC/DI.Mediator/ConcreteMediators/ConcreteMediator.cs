@@ -10,7 +10,7 @@ namespace DI.Mediator.ConcreteMediators
 
     /// </summary>
 
-    class ConcreteMediator : AbstractMediator
+    class ConcreteMediator : AMediatorColleagues
 
 
     {
