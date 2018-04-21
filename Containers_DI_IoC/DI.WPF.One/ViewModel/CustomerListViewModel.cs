@@ -1,5 +1,8 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using DI.WPF.One.Interfaces;
+using DI.WPF.One.MediatorVM;
 using DI.WPF.One.Model;
 using DI.WPF.One.Repository;
 
@@ -16,7 +19,7 @@ namespace DI.WPF.One.ViewModel
             {
                 if (value != this._customerObjCollection)
                     _customerObjCollection = value;
-                this.SetPropertyChanged("CustomerObjCollection");
+                this.NotifyPropertyChanged(new PropertyChangedEventArgs("CustomerObjCollection"));
             }
         }
 
@@ -32,10 +35,9 @@ namespace DI.WPF.One.ViewModel
             {
                 if (value != this._selectedCustomerObject)
                     _selectedCustomerObject = value;
-                
-                this.SetPropertyChanged("SelectedCustomerObject");
-                //Send("Sending Customer Obj", SelectedCustomerObject);
 
+                this.NotifyPropertyChanged(new PropertyChangedEventArgs("SelectedCustomerObject"));
+   
             }
         }
         public CustomerListViewModel(ICustomerRepository customerRepository)

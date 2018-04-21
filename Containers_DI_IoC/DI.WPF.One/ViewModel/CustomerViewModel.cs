@@ -1,6 +1,9 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Windows.Controls;
 using DI.WPF.One.Interfaces;
-using DI.WPF.One.Mediators;
+using DI.WPF.One.MediatorVM;
 using DI.WPF.One.Model;
 using DI.WPF.One.Repository;
 
@@ -16,7 +19,7 @@ namespace DI.WPF.One.ViewModel
             {
                 if (value != this._CustomerSelected)
                     _CustomerSelected = value;
-                this.SetPropertyChanged("CustomerObjSelected");
+                this.NotifyPropertyChanged(new PropertyChangedEventArgs("CustomerObjSelected"));
             }
         }
 
@@ -27,9 +30,6 @@ namespace DI.WPF.One.ViewModel
 
         public CustomerViewModel()
         {
-            //_CustomerModel.Id= 0;
-            //_CustomerModel.Name=
-            //    _CustomerModel.Address= null;
         }
         public CustomerViewModel(ICustomerRepository customerRepository)
         {
@@ -43,7 +43,7 @@ namespace DI.WPF.One.ViewModel
             set
             {
                 _CustomerSelected.Id = value;
-                SetPropertyChanged("CustomerId");
+                NotifyPropertyChanged(new PropertyChangedEventArgs("CustomerId"));
             }
         }
         public string CustomerName
@@ -52,7 +52,7 @@ namespace DI.WPF.One.ViewModel
             set
             {
                 _CustomerSelected.Name = value;
-                SetPropertyChanged("CustomerName");
+                NotifyPropertyChanged(new PropertyChangedEventArgs("CustomerName"));
             }
         }
 
@@ -62,7 +62,22 @@ namespace DI.WPF.One.ViewModel
             set
             {
                 _CustomerSelected.Address = value;
-                SetPropertyChanged("CustomerAddress");
+                NotifyPropertyChanged(new PropertyChangedEventArgs("CustomerAddress"));
+            }
+        }
+
+
+        private Customer _selectedCustomer;
+        public Customer SelectedCustomer
+        {
+            get
+            {
+                return _selectedCustomer;
+            }
+            set
+            {
+                _selectedCustomer = value;
+                NotifyPropertyChanged(new PropertyChangedEventArgs("SelectedCustomer"));
             }
         }
 

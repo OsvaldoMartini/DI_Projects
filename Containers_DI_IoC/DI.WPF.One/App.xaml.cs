@@ -1,6 +1,8 @@
 ﻿using System.Windows;
 using Autofac;
+using DI.WPF.One.Foundation;
 using DI.WPF.One.Interfaces;
+using DI.WPF.One.Model;
 using DI.WPF.One.Repository;
 using DI.WPF.One.ViewModel;
 
@@ -12,6 +14,14 @@ namespace DI.WPF.One
     public partial class App : Application
     {
 
+        private static StoreXML storeXML = new StoreXML();
+        public static StoreXML StoreXML { get { return storeXML; } }
+        internal static Messenger Messenger
+        {
+            get { return _messenger; }
+        }
+        readonly static Messenger _messenger = new Messenger();
+        
         public static IContainer Container;
 
         protected override void OnStartup(StartupEventArgs e)
@@ -22,11 +32,6 @@ namespace DI.WPF.One
             builder.RegisterType<CustomerViewModel>().As<ICustomerViewModel>();
             builder.RegisterType<CustomerRepository>().As<ICustomerRepository>();
             
-            //builder.RegisterType<ConcreteMediator>();
-            //builder.Register<CustomerViewModel>(b => new CustomerViewModel(b.Resolve<CustomerRepository>()));
-            //builder.Register<ConcreteMediator>(b => new ConcreteMediator(b.Resolve<CustomerViewModel>()));
-            //builder.Register<CustomerListViewModel>(b => new CustomerListViewModel(b.Resolve<ConcreteMediator>()))
-
             Container = builder.Build();
 
             base.OnStartup(e);

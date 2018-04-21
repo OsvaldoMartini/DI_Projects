@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Input;
-using DI.WPF.One.Interfaces;
-using DI.WPF.One.ViewModel;
 
 namespace DI.WPF.One.Commands
 {

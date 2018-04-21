@@ -1,7 +1,8 @@
-﻿using System.Linq;
+﻿using System.ComponentModel;
 using System.Windows.Input;
 using DI.WPF.One.Commands;
 using DI.WPF.One.Interfaces;
+using DI.WPF.One.MediatorVM;
 using DI.WPF.One.Model;
 
 namespace DI.WPF.One.ViewModel
@@ -12,8 +13,20 @@ namespace DI.WPF.One.ViewModel
 
     /// </summary>
 
-    public class MainWindowViewModel: ViewModelBase, IViewModel,IMainWindowViewModel
+    public class MainWindowViewModel : ViewModelBase, IViewModel, IMainWindowViewModel
     {
+
+        public MainWindowViewModel(ICustomerListViewModel customerListViewModel, ICustomerViewModel customerViewModel)
+        {
+            _CustomerListViewModel = customerListViewModel;
+            _CustomerViewModel = customerViewModel;
+
+            CurrentViewModel = _CustomerViewModel;
+            ToggleViewCommand = new ToggleViewCommand((p) => OnToggleViewCommand());
+
+
+        }
+
         public ICommand ToggleViewCommand { get; private set; }
 
         public void OnToggleViewCommand()
@@ -30,22 +43,26 @@ namespace DI.WPF.One.ViewModel
         }
 
         #region CustomerListViewModel
+
         private ICustomerListViewModel _CustomerListViewModel;
-        
-        ICustomerListViewModel CustomerListViewModel
+
+        private ICustomerListViewModel CustomerListViewModel
         {
             get { return _CustomerListViewModel; }
 
             set
             {
                 _CustomerListViewModel = value;
-                SetPropertyChanged("CustomerListViewModel");
+                NotifyPropertyChanged(new PropertyChangedEventArgs("CustomerListViewModel"));
             }
         }
+
         #endregion
 
         #region  CustomerViewModel
+
         private ICustomerViewModel _CustomerViewModel;
+
         public ICustomerViewModel CustomerViewModel
         {
             get { return _CustomerViewModel; }
@@ -53,9 +70,10 @@ namespace DI.WPF.One.ViewModel
             set
             {
                 _CustomerViewModel = value;
-                SetPropertyChanged("CustomerViewModel");
+                NotifyPropertyChanged(new PropertyChangedEventArgs("CustomerViewModel"));
             }
         }
+
         #endregion
 
 
@@ -70,23 +88,28 @@ namespace DI.WPF.One.ViewModel
             set
             {
                 _CurrentViewModel = value;
-                SetPropertyChanged("CurrentViewModel");
+                NotifyPropertyChanged(new PropertyChangedEventArgs("CurrentViewModel"));
             }
         }
+
         #endregion
 
-        public MainWindowViewModel(ICustomerListViewModel customerListViewModel, ICustomerViewModel customerViewModel)
+
+        #region Model Properies
+
+        private Customer _currentCustomer;
+
+        public Customer CurrentCustomer
         {
-
-            _CustomerListViewModel = customerListViewModel;
-            _CustomerViewModel = customerViewModel;
-
-            CurrentViewModel = _CustomerViewModel;
-            ToggleViewCommand = new ToggleViewCommand((p) => OnToggleViewCommand());
-
-
+            get { return _currentCustomer; }
+            set
+            {
+                _currentCustomer = value;
+                NotifyPropertyChanged(new PropertyChangedEventArgs("CurrentCustomer"));
+            }
         }
 
+        #endregion
     }
 
 }
