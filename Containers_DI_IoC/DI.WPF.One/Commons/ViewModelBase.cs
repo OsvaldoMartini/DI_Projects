@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel;
-using DI.WPF.One.MediatorVM;
 
-namespace DI.WPF.One.Interfaces
+namespace DI.WPF.One.Commons
 {
 
     public abstract class ViewModelBase : INotifyPropertyChanged

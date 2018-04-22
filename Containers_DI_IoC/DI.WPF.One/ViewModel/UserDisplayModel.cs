@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Input;
+using DI.WPF.One.Commons;
 using DI.WPF.One.Foundation;
 using DI.WPF.One.Interfaces;
 

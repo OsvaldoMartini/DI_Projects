@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Windows.Input;
-using DI.WPF.One.Commands;
+using DI.WPF.One.Commons;
 using DI.WPF.One.Interfaces;
 using DI.WPF.One.MediatorVM;
 using DI.WPF.One.Model;
@@ -22,7 +22,7 @@ namespace DI.WPF.One.ViewModel
             _CustomerViewModel = customerViewModel;
 
             CurrentViewModel = _CustomerViewModel;
-            ToggleViewCommand = new ToggleViewCommand((p) => OnToggleViewCommand());
+            ToggleViewCommand = new CommandBase((p) => OnToggleViewCommand());
 
 
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using DI.WPF.One.Commons;
 using DI.WPF.One.Interfaces;
 using DI.WPF.One.Model;
 

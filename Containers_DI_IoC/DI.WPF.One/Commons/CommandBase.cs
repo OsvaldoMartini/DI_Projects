@@ -2,19 +2,19 @@
 using System.Diagnostics;
 using System.Windows.Input;
 
-namespace DI.WPF.One.Commands
+namespace DI.WPF.One.Commons
 {
-    public class ToggleViewCommand : ICommand
+    public class CommandBase : ICommand
     {
         private readonly Action<object> execute;
         private readonly Predicate<object> canExecute;
 
-        public ToggleViewCommand(Action<object> execute)
+        public CommandBase(Action<object> execute)
             : this(execute, null)
         {
         }
 
-        public ToggleViewCommand(Action<object> execute, Predicate<object> canExecute)
+        public CommandBase(Action<object> execute, Predicate<object> canExecute)
         {
             if (execute == null)
             {

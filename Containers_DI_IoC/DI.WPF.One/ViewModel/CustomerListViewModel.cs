@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using DI.WPF.One.Commons;
 using DI.WPF.One.Interfaces;
 using DI.WPF.One.MediatorVM;
 using DI.WPF.One.Model;
@@ -46,7 +47,6 @@ namespace DI.WPF.One.ViewModel
             _customerObjCollection = new ObservableCollection<Customer>(customerRepository.GetAll());
 
         }
-
        
     }
 }

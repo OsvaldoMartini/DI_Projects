@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Media;
+using DI.WPF.One.Commons;
 using DI.WPF.One.Interfaces;
 
 namespace DI.WPF.One.ViewModel

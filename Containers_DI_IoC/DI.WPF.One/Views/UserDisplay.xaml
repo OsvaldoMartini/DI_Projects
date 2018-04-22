@@ -8,7 +8,10 @@
     <UserControl.Resources>
         <Style x:Key="DesignerItemStyle" TargetType="ContentControl" />
     </UserControl.Resources>
-    
+    <UserControl.DataContext>
+        <viewModel:UserDisplayModel />
+    </UserControl.DataContext>
+
 
     <!--TextBox-->
     <ContentControl Width="Auto"

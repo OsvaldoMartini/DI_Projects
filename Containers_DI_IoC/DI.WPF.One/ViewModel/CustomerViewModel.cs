@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows.Controls;
+using DI.WPF.One.Commons;
 using DI.WPF.One.Interfaces;
 using DI.WPF.One.MediatorVM;
 using DI.WPF.One.Model;
